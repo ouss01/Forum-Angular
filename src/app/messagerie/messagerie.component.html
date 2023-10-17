@@ -1,0 +1,205 @@
+<app-navbar></app-navbar>
+<div class="theme-layout">
+	
+	<div class="responsive-header">
+		<div class="mh-head first Sticky">
+			<span class="mh-btns-left">
+				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
+			</span>
+			<span class="mh-text">
+				<a href="newsfeed.html" title=""><img src="assets/images/logo2.png" alt=""></a>
+			</span>
+			<span class="mh-btns-right">
+				<a class="fa fa-sliders" href="#shoppingbag"></a>
+			</span>
+		</div>
+		<div class="mh-head second">
+			<form class="mh-form">
+				<input placeholder="search" />
+				<a href="#/" class="fa fa-search"></a>
+			</form>
+		</div>
+	
+	</div><!-- responsive header -->
+	
+	<div class="topbar stick">
+		<div class="logo">
+			<a title="" href="newsfeed.html"><img src="assets/images/logo.png" alt=""></a>
+		</div>
+		
+		
+	
+	<section>
+		<div class="feature-photo">
+			<figure><img src="assets/images/resources/timeline-1.jpg" alt=""></figure>
+			<div class="add-btn">
+				<span>1205 followers</span>
+				<a href="#" title="" data-ripple="">Add Friend</a>
+			</div>
+			<form class="edit-phto">
+				<i class="fa fa-camera-retro"></i>
+				<label class="fileContainer">
+					Edit Cover Photo
+				<input type="file"/>
+				</label>
+			</form>
+			<div class="container-fluid">
+				<div class="row merged">
+					<div class="col-lg-2 col-sm-3">
+						<div class="user-avatar">
+							<figure>
+								<img src="assets/images/resources/user-avatar.jpg" alt="">
+								<form class="edit-phto">
+									<i class="fa fa-camera-retro"></i>
+									<label class="fileContainer">
+										Edit Display Photo
+										<input type="file"/>
+									</label>
+								</form>
+							</figure>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!-- top area -->
+
+	<section>
+		<div class="gap gray-bg">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="row" id="page-contents">
+							<div class="col-lg-3">
+								
+							</div><!-- sidebar -->
+							<div class="col-lg-6">
+								<div class="central-meta">
+									<div class="messages">
+										<h5 class="f-title"><i class="ti-bell"></i>All Messages <span class="more-options"><i class="fa fa-ellipsis-h"></i></span></h5>
+										<div class="message-box" *ngFor="let c of receivers">
+											<ul class="peoples"  (click)="selectedUser = c">
+                                                <li>
+                                                  <figure>
+                                                    <img src="../assets/images/resources/friend-avatar2.jpg" alt="">
+                                                    <span class="status f-online"></span>
+                                                  </figure>
+                                                  <div class="people-name">
+                                                    <span>{{c.userName}}</span>
+                                                  </div>
+                                                </li>
+                                              </ul>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/> <br/>
+                                            <br/>
+											<div class="peoples-mesg-box">
+												<div class="conversation-head">
+                                                    <figure><img src="assets/images/resources/friend-avatar.jpg" alt=""></figure>
+                                                    <span>{{selectedUser.userName}}<i>online</i></span>
+                                                  </div>
+												<ul class="chatting-area">
+												
+													<li class="me">
+														<figure><img src="assets/images/resources/userlist-1.jpg" alt=""></figure>
+														<p  [(ngModel)]="message">{{this.message}}</p>
+													</li>
+													
+												</ul>
+												<div class="message-text-container">
+                                                    <form [formGroup]="messageform">
+                                                      <textarea formControlName="message" [(ngModel)]="message"></textarea>
+                                                      <button title="send" (click)="createMessage()"><i class="fa fa-paper-plane"></i></button>
+                                                    </form>
+                                                  </div>
+                                                  
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div><!-- centerl meta -->
+						
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<div class="bottombar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+					<i><img src="assets/images/credit-cards.png" alt=""></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="side-panel">
+			<h4 class="panel-title">General Setting</h4>
+			<form method="post">
+				<div class="setting-row">
+					<span>use night mode</span>
+					<input type="checkbox" id="nightmode1"/> 
+				
+				</div>
+				<div class="setting-row">
+					<span>Notifications</span>
+					<input type="checkbox" id="switch22" /> 
+					
+				</div>
+				<div class="setting-row">
+					<span>Notification sound</span>
+					<input type="checkbox" id="switch33" /> 
+		
+				</div>
+				<div class="setting-row">
+					<span>My profile</span>
+					<input type="checkbox" id="switch44" /> 
+			
+				</div>
+				<div class="setting-row">
+					<span>Show profile</span>
+					<input type="checkbox" id="switch55" /> 
+					
+				</div>
+			</form>
+			<h4 class="panel-title">Account Setting</h4>
+			<form method="post">
+				<div class="setting-row">
+					<span>Sub users</span>
+					<input type="checkbox" id="switch66" /> 
+			
+				</div>
+				<div class="setting-row">
+					<span>personal account</span>
+					<input type="checkbox" id="switch77" /> 
+					
+				</div>
+				<div class="setting-row">
+					<span>Business account</span>
+					<input type="checkbox" id="switch88" /> 
+			
+				</div>
+				<div class="setting-row">
+					<span>Show me online</span>
+					<input type="checkbox" id="switch99" /> 
+					
+				</div>
+				<div class="setting-row">
+					<span>Delete history</span>
+					<input type="checkbox" id="switch101" /> 
+					
+				</div>
+				<div class="setting-row">
+					<span>Expose author name</span>
+					<input type="checkbox" id="switch111" /> 
+
+				</div>
+			</form>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
